@@ -27,7 +27,13 @@ function handleSubmit(e){
     const arr = randomNumArr(min_input,max_input,number_input)
     const t = document.getElementById("myTable")
     for(i=0; i < arr.length;i++){
-        document.cre
+        const tr = document.createElement("tr")
+        tr.setAttribute("id", "MyTr");
+        t.appendChild(tr)
+        const td = document.createElement("TD"); 
+        const num = document.createTextNode(arr[0]); 
+        td.appendChild(num); 
+        document.getElementById("MyTr").appendChild(td);
     }
 
 }
